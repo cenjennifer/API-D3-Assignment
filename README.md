@@ -5,6 +5,3 @@ Note: The company's api credentials and url are removed in the code base. Thus, 
 
 ##Technologies Utilized 
 AngularJS, Node.js, D3.js
-
-## Author
-Jennifer Cen (cenjennifer@gmail.com)
