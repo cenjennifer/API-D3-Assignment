@@ -1,0 +1,16 @@
+<table class="table">
+    <tr>
+        <th class="col-md-4">Name</th>
+        <th class="col-md-2">Amount ($)</th>
+        <th class="col-md-2">Shares</th>
+        <th class="col-md-2">Weight (%)</th>
+        <th class="col-md-2">Asset Class</th>
+    </tr>
+    <tr ng-repeat="holding in holdingsData">
+        <td>{{holding.security.name}}</td>
+        <td>{{holding.amount | currency }}</td>
+        <td>{{holding.shares | number : 3}}</td>
+        <td>{{holding.weight*100 | number : 3}}</td>
+        <td>{{holding.security.assetClass}}</td>
+    </tr>
+</table>

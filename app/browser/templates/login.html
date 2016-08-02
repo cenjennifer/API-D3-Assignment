@@ -1,0 +1,24 @@
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="loginDiv">
+                <h1>Login</h1>
+                <form id="login-form" name="loginForm" ng-submit="loginForm.$valid && sendLogin(login)">
+                    <div ng-show="error">{{ error }}</div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <p ng-show="loginForm.login[email].$invalid && !loginForm.login[email].$pristine">Please enter a valid email.</p>
+                        <input type="email" ng-model="login.email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" ng-model="login.password" class="form-control" required>
+                    </div>
+                    <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-success">Enter<i class="fa fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</section>

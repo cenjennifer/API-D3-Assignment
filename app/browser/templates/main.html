@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <h3 class="col-md-8">Client Holdings: <span ng-bind="apiService.apiGeneralData.name"></span></h3>
+            <h3 class="col-md-4 name" ng-show="showGraph">Account Growth</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-2 filter">
+                <div class="btn-group" uib-dropdown is-open="status.isopen">
+                    <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                        Account Type <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                        <li role="menuitem" ng-repeat="a in apiService.apiGeneralData.accounts">
+                            <a ng-click="account($index)" ng-bind="a.accountName"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <a ng-click="showGraph = !showGraph">
+                    <div ng-class="{'glyphicon glyphicon-signal': !showGraph, 'glyphicon glyphicon-list-alt': showGraph}">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" ng-hide="showGraph">
+            <holdings-table holdings-data="holdingsData"></holdings-table>
+        </div>
+        <div id="graphSection" ng-show="showGraph" class="row">
+            <div linear-chart chart-data="returnsData"></div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke: #35BCA4;
+    stroke-width: 1px;
+}
+
+
+th {
+    background-color: #35BCA4;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #EDF0F2;
+    color: #35BCA4;
+}
+
+.name {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.filter {
+    padding-bottom: 10px;
+}
+
+

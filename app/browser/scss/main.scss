@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
+$font-family-base: 'Raleway', sans-serif;
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/*Google Font Styling*/
+.glyphicon {
+    font-size: 30px;
+    margin-top: 3px;
+}
+
+/*navbar*/
+.navbar {
+    display: block;
+    background: #283645;
+    box-shadow: 1px 1px 14px -3px black;
+    padding: 10px;
+}
+
+
+/*Bootstrap styling*/
+div[class*='col-md-'],
+h3[class*='col-md-'] {
+    padding-left: 0;
+}
+.row {
+    margin-right: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+.btn {
+    margin-top: 5px;
+    padding: 4px;
+}
+
+@import 'customstyles/main';
