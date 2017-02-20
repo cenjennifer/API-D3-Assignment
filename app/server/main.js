@@ -41,7 +41,7 @@ request.post({
     server.set("token", r.response);
 });
 
-// request to hedgeable api
+// request to company api
 server.all('/client/*', function(req, res) {
     req.body.token = server.get('token');
     req.body.usertoken = server.get('usertoken');
